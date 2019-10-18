@@ -1,0 +1,23 @@
+﻿@page "{number:int}"
+@model IndexModel
+
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">@Model.Input.Number</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<form action="/" method="get">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="Input.Number"></label>
+                <input type="text" asp-for="Input.Number" name="number" class="form-control" placeholder="Number" />
+            </div>
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+    </div>
+</form>
